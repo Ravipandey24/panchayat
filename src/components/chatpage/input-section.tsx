@@ -34,7 +34,6 @@ const InputSection = ({ chatData }: { chatData: Chat }) => {
       });
 
       await axios.post('/api/message/send', payload)
-      setInput("");
       textareaRef.current?.focus();
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -50,6 +49,7 @@ const InputSection = ({ chatData }: { chatData: Chat }) => {
       console.error("message", error);
     } finally {
       setLoading(false);
+      setInput("");
     }
   };
   const onKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
