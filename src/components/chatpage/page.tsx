@@ -19,7 +19,7 @@ const ChatPage = ({ chatData }: { chatData: Chat }) => {
           currentUser={chatData.currentUser}
           participants={chatData.partner as UserProfile[]}
           admins={(chatData.conversation as GroupConversation).admins}
-          initialMessages={chatData.conversation.messages}
+          initialMessages={chatData.conversation.messages.reverse()}
         ></GroupChatSection>
       ) : null}
       <div className="inset-x-0 bottom-0 ">
