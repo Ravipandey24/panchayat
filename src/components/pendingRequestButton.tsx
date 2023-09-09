@@ -27,7 +27,7 @@ const PendingRequestButton: FC<PendingRequestButtonProps> = ({ requestCount, use
             pusherClient.unsubscribe(`friend_request:${userId}}`);
             pusherClient.unbind('incoming-friend-request', incomingRequestHandler);
         };
-    }, [])
+    }, [userId])
     
 
     return (

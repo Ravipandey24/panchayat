@@ -32,7 +32,7 @@ const FriendListSection: FC<FriendListSectionProps> = ({
       pusherClient.unsubscribe(`friends:${userId}}`);
       pusherClient.unbind("new-friend-addition", newFriendHandler);
     };
-  }, []);
+  }, [userId]);
 
   if (friendList.length === 0) {
     return (

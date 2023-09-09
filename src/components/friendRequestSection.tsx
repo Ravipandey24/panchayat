@@ -52,7 +52,7 @@ const FriendRequestSection: FC<friendRequestSectionProps> = ({
       pusherClient.unsubscribe(`friend_request:${userId}}`);
       pusherClient.unbind("incoming-friend-request", incomingRequestHandler);
     };
-  }, []);
+  }, [userId]);
 
   return (
     <div className="p-2 space-y-2">

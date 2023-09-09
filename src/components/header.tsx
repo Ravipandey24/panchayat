@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useDashboardContext } from "./providers/dashboard-provider";
 
 
-const header = ({ userData }: { userData: UserProfile }) => {
+const Header = ({ userData }: { userData: UserProfile }) => {
   const pathname = usePathname();
   const isChatPage = pathname?.includes("chat/");
 
@@ -48,4 +48,4 @@ const ChatHeader: FC = () => {
   );
 };
 
-export default header;
+export default Header;
